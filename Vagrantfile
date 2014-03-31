@@ -8,17 +8,17 @@
 cpus = '1'
 memory = '512'
 
-hostname = 'min'
-
 # WARNING: if you are going to run a 64 bit guest inside a 32 bit host
 # you must enable hardware virtualization from your BIOS
 begin
   require_relative('Vagrantfile_local')
   box = Box
   box_url = BoxUrl
+  hostname = Hostname
 rescue LoadError
   box = "precise32"
   box_url = "http://files.vagrantup.com/precise32.box"
+  hostname = 'vagrant-template'
 end
 
 Vagrant.configure("2") do |config|
