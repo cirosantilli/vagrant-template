@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-set -eu
+set -euv
 printf '\ncd /vagrant\n' >> ~/.bashrc
